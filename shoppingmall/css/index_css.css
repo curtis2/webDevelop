@@ -1,0 +1,196 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body{
+    margin: 8px;
+}
+
+.top_menu{
+    border:2px solid #e4393c;
+    width: 220px;
+}
+
+.top_title{
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 11pt;
+    font-weight: bold;
+    color: White;
+    background: #e4393c;
+    padding-left: 20px;
+}
+
+.top_menu li{
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 11pt;
+    padding-left: 8px;
+    z-index: 3;
+    background: url("http://img.mukewang.com/5411027300014f0200220030.jpg") no-repeat right;
+}
+
+.top_menu li a:hover{
+   text-decoration: underline;
+    font-weight: bold;
+    color: #e4393c;
+}
+
+/*
+   知识点1： li标签页可以设置hover属性
+*/
+.top_menu li:hover{
+    height: 60px;
+    border: 1px solid #DDD;
+    border-right:0px;
+    box-shadow: 0 0 8px #DDD;
+    background: none;
+    -moz-box-shadow: 0 0 8px #DDD;
+    -webkit-box-shadow: 0 0 8px #DDD;
+    border-left:4px solid #e4393c;
+}
+
+/*
+  知识点2：绝对定位布局的应用
+*/
+.sub_menu{
+    display: none;
+    width: 715px;
+    background: white;
+    border: 1px solid #DDD;
+    box-shadow: 0 0 8px #DDD;
+    -moz-box-shadow: 0 0 8px #DDD;
+    -webkit-box-shadow: 0 0 8px #DDD;
+    position: absolute;
+    top: 40px;
+    left: 220px;
+    z-index: 4;
+}
+
+.sub_menu_left{
+    float: left;
+    width: 490px;
+    margin: 5px;
+}
+.sub_menu_right{
+    float: left;
+    width: 200px;
+    margin: 5px;
+}
+
+/*
+  知识点3：设置li的hover属性，动态的隐藏和显示悬浮层
+  这里怎么可以这么设置？
+*/
+.top_menu li:hover .sub_menu{
+    display: block;
+}
+
+/*
+
+  知识点4：使用z-index时要和position同时使用才能起作用
+*/
+.top_menu li:hover span{
+    background: white;
+    display: inline-block;
+    width: 18px;
+    height: 60px;
+    float: right;
+    z-index: 20;
+    position: relative;
+}
+
+.sub_menu_left dl
+{
+    display: block;
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 6px;
+    padding-bottom: 6px;
+    overflow: hidden;
+}
+
+
+.sub_menu_left dl dt
+{
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 60px;
+    text-align: right;
+    height: 22px;
+    line-height: 22px;
+    padding-right: 6px;
+}
+
+
+.sub_menu_left dl dd
+{
+    display: block;
+    /*float: left;   怎么了这个元素就不能排列了呢？*/
+    overflow: hidden;
+}
+
+
+.sub_menu_left dl dt a
+ {
+    color: #e4393c;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 10pt;
+}
+
+
+.sub_menu_left dl dd a
+{
+    text-decoration: none;
+    display: block;
+    float: left;
+    border-left: 1px solid #CCC;
+    color: #737373;
+    font-size: 12px;
+    padding: 0 8px;
+    height: 14px;
+    line-height: 14px;
+    margin: 4px 0;
+}
+
+
+.sub_menu_left dl dd
+{
+    margin: 3px 0;
+}
+
+.sub_menu_left dl dt
+{
+    color: #e4393c;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+
+.sub_menu_left dl dd a:hover
+{
+    color: #e4393c;
+    font-weight: normal;
+}
+
+
+/*
+  知识点5：浮动的时候右边的内容超过父容器的宽度了，怎么保证不换行
+*/
+
+.sub_menu_right dl dd a
+{
+    color: #737373;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+
+
+
+
+

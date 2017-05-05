@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+#wrap{
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #eeeeee;
+    text-align: center;
+}
+
+label{
+    width: 40px;
+    text-align: left;
+    display: inline-block;
+}
+
+p{
+    margin-top: 10px;
+}
+
+#submit{
+    width: 200px;
+    margin: 10px auto;
+    padding: 4px;
+}
+#check{
+    width: 200px;
+    margin: 10px auto;
+    padding: 4px;
+}
+
+p1{
+   font-size: 10px;
+    color: red;
+    display: block;
+    text-align: left
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>JQueryValidation-基本验证方法</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.10.0.js"></script>
+    <script src="js/jquery.validate-1.13.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#demoForm").validate({
+                debug:true,
+                rules:{
+                    username:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10,
+//                        remote:"remote.json"
+                 /*       remote:{
+                            url:"remote.json",
+                            type:"post",
+                            data:{
+                                loginTime:function () {
+                                    return +new Date;
+                                }
+                            }
+                        }*/
+                    },
+                    password:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10
+                    },
+                    // equalTo的值和指定的选择器的值相比
+                    confirm_password:{
+                        equalTo:"#password"
+                    }
+                },
+                messages:{
+                    username:{
+                        required:"用户名必须填写",
+                        minlength: "用户名最少为2个字符",
+                        maxlength:"用户名最多为10个字符",
+                        remote:"用户名不存在"
+                    },
+                    password:{
+                        required:"密码必须填写",
+                        minlength: "密码最少为2个字符",
+                        maxlength:"密码最多为10个字符"
+                    },
+                    confirm_password:{
+                        equalTo:"两次输入的密码不一致"
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+  <div id="wrap">
+    <form id="demoForm">
+            <p>登录信息</p>
+            <p><label>用户名:</label><input type="text" id="username" name="username"/></p>
+            <p><label>密码:  </label><input type="password" id="password" name="password"></p>
+            <p><label>确认密码:  </label><input type="password" id="confirm_password" name="confirm_password"></p>
+             <input type="submit" id="submit" value="提交"/>
+    </form>
+      <p1> <strong>基本验证方法都有哪些：</strong><br/>
+          required 必填,remote 远程校验<br/>
+          minlength 最小长度, maxlength 最大长度, rangelenght 长度范围<br/>
+          min最小值 ,max最大值 ,range值范围<br/>
+          email Email格式, url URL格式, data日期 , dataISO  ISO日期<br/>
+          number 数字, digits 整数 ,equalTo 与另一个元素相等<br/>
+      </p1>
+      <p1><strong>remote 远程校验</strong><br/>
+          remote:"remote.json"    用于表单中一个按钮的远程登录验证
+
+          remote可以指定远程接口
+          remote:{
+              url:"remote.json",
+               type:"post",
+               data:{
+                    loginTime:function () {
+                    return +new Date;
+                }
+           }
+      </p1>
+  </div>
+</body>
+</html>

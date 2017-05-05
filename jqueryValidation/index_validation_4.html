@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>JQueryValidation-Validator对象的静态方法</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.10.0.js"></script>
+    <script src="js/jquery.validate-1.13.1.js"></script>
+    <script type="text/javascript">
+        var validator;
+        $(document).ready(function () {
+
+            //设置本页面上所有的表单的配置
+            $.validator.setDefaults({
+                debug:true,
+            })
+
+            validator= $("#demoForm").validate({
+                rules:{
+                    username:{
+                        minlength: 2,
+                        maxlength:10,
+                    },
+                    password:{
+//                        required:true,
+                        minlength: 2,
+                        maxlength:10
+                    },
+                    // equalTo的值和指定的选择器的值相比
+                    confirm_password:{
+                        equalTo:"#password"
+                    }
+                },
+                messages:{
+                    username:{
+                        required:"用户名必须填写",
+                        minlength: "用户名最少为2个字符",
+                        maxlength:"用户名最多为10个字符",
+                        remote:"用户名不存在"
+                    },
+                    password:{
+                        required:"密码必须填写",
+                        minlength: "密码最少为2个字符",
+                        maxlength:"密码最多为10个字符"
+                    },
+                    confirm_password:{
+                        equalTo:"两次输入的密码不一致"
+                    }
+                }
+            });
+
+            //给指定class类名的添加规则
+            $.validator.addClassRules({
+                text:{
+                    required:true
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <form id="demoForm">
+        <p>登录信息</p>
+        <p><label>用户名:</label><input type="text" id="username"  class="text" name="username"/></p>
+        <p><label>密码:  </label><input type="password" id="password" class="text" name="password"></p>
+        <p><label>确认密码:  </label><input type="password" id="confirm_password" name="confirm_password"></p>
+        <input type="button" id="check" value="检查"/>
+        <input type="submit" id="submit" value="提交"/>
+    </form>
+    <p1>
+        Validator对象的静态方法</br>
+        Validator对象还有很多有用的静态方法，可以直接使用：</br>
+        validator.addMethod(name,method,[,message]);、
+        增加自定义的验证方法</br>
+        validator.format(template,argument,argumentN..);
+        格式化字符串，用参数代替模板中的{n}</br>
+        validator.setDefaults(options);修改插件的默认位置</br>
+        validator.addClassRules(name,rules);为某些包含为name的class增加组合验证类型
+    </p1>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

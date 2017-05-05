@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrap{
+    width: 800px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.writer{
+    font-size: 16px;
+    margin-top: 20px;
+    border-bottom: 1px dotted #CCC;
+}
+
+.newConent{
+     text-align: left;
+     margin-top: 40px;
+     letter-spacing:1px;
+}
+
+.newConent h2{
+    font-size: 14px;
+}
+
+.newConent p{
+    text-indent: 30px;
+    margin: 15px 0px;
+    font-size: 14px;
+}
+.newConent_img{
+    text-align: center;
+}
+

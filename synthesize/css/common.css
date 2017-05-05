@@ -1,0 +1,181 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.top{
+    width: 100%;
+    height: 27px;
+    line-height: 27px;
+    background: url("../images/top_bg.jpg") repeat-x;
+    border-bottom: 1px solid #ffffff;
+}
+
+.top_content{
+    width: 1000px;
+    margin: 0 auto;
+    height: 27px;
+    line-height: 27px;
+}
+
+.top_content li{
+    float: right;
+    margin: 0 10px;
+    font-size: 12px;
+    list-style-image: url("../images/arrow.jpg");
+}
+
+.top_content li a:link,.top_content li a:visited{
+    color:  #000;
+    text-decoration: none;
+}
+
+.top_content li a:hover{
+    color: #C00;
+}
+
+/*
+ 顶部的知识点：
+ 1.左浮动，实现横排的ul列表
+ 2.行间距和行高相同实现垂直居中行内文字
+ 3.设置li的图片样式 list-style-image
+ 4.定宽的块级元素水平居中 width: 1000px; margin: 0 auto;
+*/
+
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+}
+
+.header_left{
+    float: left;
+}
+
+.header_right{
+    float: right;
+    margin-top: 27px;
+    margin-right: 10px;
+}
+
+.header_right img{
+    vertical-align: middle;
+}
+
+.tel{
+    font-size: 25px;
+    color: #CC0000;
+}
+/*
+   头部的知识点：
+   1.一行中要实现一个div左对齐，一个div右对齐。使用左浮动 +右浮动
+   2.图片的对齐属性 vertical-align
+*/
+
+.nav_lef,.nav_min,.nav_right{
+    float: left;
+    height: 40px;
+}
+
+.nav_lef{
+    width:10px;
+}
+
+.nav_min{
+    width: 980px;
+    background: url(../images/nav_bg.jpg) repeat-x;
+    line-height: 40px;
+}
+
+.nav_right{
+    width:10px;
+}
+
+.nav_min_left{
+    float: left;
+    width: 680px;
+}
+
+.nav_min_right{
+    float: left;
+    width: 300px;
+}
+
+.nav_min li{
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+
+
+.nav_min li a:hover,.top_content li a:active{
+    color: red;
+    text-decoration: none;
+}
+
+.nav_min li a{
+    color: #ffffff;
+}
+
+
+.nav_min_right input{
+    width: 190px;
+    height: 25px;
+    margin-top: 5px;
+    background: url("../images/search.jpg") no-repeat right center #ffffff;
+    padding-right: 25px;
+}
+/*
+  导航栏的知识点
+  1.使用float左float，然后给定宽度实现水平3列布局
+  2.使用了float属性的li,可以通过给每个li定宽，从而使li在整个盒子中整体居中
+ */
+
+
+
+.footer{
+    clear: both;
+    width: 100%;
+    height: 200px;
+    background-color: #E8e8E8;
+    margin-top: 10px;
+}
+
+.footer_content{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer_content>ul{
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+.footer_list{
+    float: left;
+    text-align: center;
+    width: 200px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #999;
+    background: url("../images/line.png") no-repeat right center;
+}
+
+.footer_list li{
+    font-size: 14px;
+}
+/*
+   底部文件的知识点
+   1.不同css选择器的作用范围的区别，通过Chrome调试器查看样式是否作用于某个元素
+*/

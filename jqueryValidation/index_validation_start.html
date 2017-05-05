@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>JQueryValidation-开始使用</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.10.0.js"></script>
+    <script src="js/jquery.validate-1.13.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // 知道点2：validate方面配置表单验证的相关属性
+            $("#demoForm").validate({
+                // 知道点2：rules和messages是平级的
+                rules:{
+                   // 知道点1：username为 元素的name属性的值
+                    username:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10
+                    },
+                    password:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10
+                    }
+                },
+                messages:{
+                    username:{
+                        required:"用户名必须填写",
+                        minlength: "用户名最少为2个字符",
+                        maxlength:"用户名最多为10个字符"
+                    },
+                    password:{
+                        required:"密码必须填写",
+                        minlength: "密码最少为2个字符",
+                        maxlength:"密码最多为10个字符"
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+  <div id="wrap">
+    <form id="demoForm">
+            <p>登录信息</p>
+            <p><label>用户名:</label><input type="text" id="username" name="username"/></p>
+            <p><label>密码:  </label><input type="password" id="password" name="password"></p>
+            <input type="submit" id="submit" value="提交"/><br/>
+    </form>
+  </div>
+</body>
+</html>

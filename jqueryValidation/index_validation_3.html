@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>JQueryValidation-validate方法</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.10.0.js"></script>
+    <script src="js/jquery.validate-1.13.1.js"></script>
+    <script type="text/javascript">
+        var validator;
+        $(document).ready(function () {
+            validator= $("#demoForm").validate({
+                debug:true,
+                rules:{
+                    username:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10,
+                    },
+                    password:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10
+                    },
+                    // equalTo的值和指定的选择器的值相比
+                    confirm_password:{
+                        equalTo:"#password"
+                    }
+                },
+                messages:{
+                    username:{
+                        required:"用户名必须填写",
+                        minlength: "用户名最少为2个字符",
+                        maxlength:"用户名最多为10个字符",
+                        remote:"用户名不存在"
+                    },
+                    password:{
+                        required:"密码必须填写",
+                        minlength: "密码最少为2个字符",
+                        maxlength:"密码最多为10个字符"
+                    },
+                    confirm_password:{
+                        equalTo:"两次输入的密码不一致"
+                    }
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <form id="demoForm">
+        <p>登录信息</p>
+        <p><label>用户名:</label><input type="text" id="username" name="username"/></p>
+        <p><label>密码:  </label><input type="password" id="password" name="password"></p>
+        <p><label>确认密码:  </label><input type="password" id="confirm_password" name="confirm_password"></p>
+        <input type="button" id="check" value="检查"/>
+        <input type="submit" id="submit" value="提交"/>
+    </form>
+    <p1><strong>validate方法</strong></br>
+        validate方法返回Validator对象，Validator对象有很多方法：</br>
+        Validator.form(); 验证表单是否有效，返回true/false</br>
+        例：validator.form();</br>
+        Validator.element(element); 验证某个元素是否有效，返回true/false</br>
+        例：validator.element("#username") </br>
+        Validator.resetForm(); 把表单恢复到验证前的状态</br>
+        例：validator.resetForm();</br>
+        Validator.showErrors(error);针对某个元素显示特定的错误信息</br>
+        例：validator.showErrors({
+        username:"哈哈，你填错了！"
+        });</br>
+        Validator.numberOfInvalids();返回无效的元素数量</br>
+        例：validator.numberOfInvalids()
+    </p1>
+</div>
+</body>
+</html>

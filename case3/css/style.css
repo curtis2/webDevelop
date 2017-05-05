@@ -1,0 +1,19 @@
+*{margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.wrap{
+    width: 850px;
+    margin: 0px auto;
+}
+
+.logo{
+   line-height: 80px;
+   color: #fff;
+   height: 80px;
+   text-indent: 30px;
+   background: rgb(51, 153, 204);
+   font-size: 30px;
+   font-family: 微软雅黑;
+}

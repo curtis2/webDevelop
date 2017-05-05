@@ -1,0 +1,108 @@
+.ad{
+    width: 100%;
+    height: 320px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+/*
+   焦点图的知识点
+   1.使用插件库实现焦点图效果
+ */
+.content{
+    width: 100%;
+    height: 260px;
+    background: #ffffff;
+    margin-top: 5px;
+    border-bottom: 1px solid  #E8E8E8;
+}
+
+.news{
+    width: 340px;
+    border: 1px solid  #E8E8E8;
+    margin-right: 7px;
+}
+
+.products{
+    width:410px;
+    margin-right: 7px;
+    border: 1px solid  #E8E8E8;
+}
+
+.sidebar{
+    width: 230px;
+    border: 1px solid  #E8E8E8;
+}
+
+.news,.products,.sidebar{
+    float: left;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.title{
+    padding: 5px;
+    font-size: 12px;
+    color: #786F66;
+    border-bottom: 1px solid  #E8E8E8;
+}
+
+.title span{
+    float: right;
+    font-size: 8px;
+}
+
+.pic_news{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.pic_news img{
+    float: left;
+    margin-right: 5px;
+}
+
+.new_list li{
+    font-size: 12px;
+    padding: 5px 10px ;
+    border-bottom: 1px dotted #CCC;
+}
+
+.new_list li a{
+    color: #000000;
+}
+.new_list li span{
+    float: right;
+}
+
+.produce_news{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.produce_news img{
+    float: left;
+    width: 158px;
+    height: 108px;
+}
+
+.produce_list li{
+    float: left;
+    text-align: center;
+    width: 100px;
+    color: #000000;
+}
+
+.produce_list li a{
+    color: #000000;
+}
+
+.video_content{
+    padding: 5px;
+}
+
+
+
+
+

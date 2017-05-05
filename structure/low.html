@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>网页简单的布局结构与表现原则-练习1-</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .wrap{
+          width: 1000px;
+          margin-top: 30px;
+          margin-left: 30px;
+        }
+
+        .left_icon{
+            float: left;
+            width: 100px;
+        }
+
+        .left_icon img{
+            padding: 8px;
+            border: 1px solid dimgrey;
+        }
+
+        .left_content{
+            float: left;
+            width: 600px;
+            margin-right: 10px;
+            padding:20px;
+            font-size: 14px;
+            border: 1px solid dimgrey;
+            background-color: #EEF7FF;
+            position: relative;
+        }
+
+        .left_content p{
+          margin-top: 20px;
+        }
+
+        .left_content span{
+            position: absolute;
+            right: 20px;
+            top: 10px
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left_icon">
+            <img src="images/head01.jpg"/>
+        </div>
+        <div class="left_content">
+            <h6>樱桃小丸子</h6>
+            <p>奥鹏教育是由教育部高等教育司2001年12月批准立项试点，2005年4月正式批准运营的远程教育公共服务体系，为遍布全国的学员提供学历(专升本，高起专)和非学历教育咨询、报名、学习辅导、课程考试、交费等7X24小时学习支持服务400-810-6736。</p>
+            <span>10分钟前</span>
+        </div>
+    </div>
+</body>
+</html>

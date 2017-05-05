@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>JQueryValidation-valid和rules方法</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.10.0.js"></script>
+    <script src="js/jquery.validate-1.13.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#demoForm").validate({
+                debug:true,
+                rules:{
+                    username:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10,
+                    },
+                    password:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10
+                    },
+                    // equalTo的值和指定的选择器的值相比
+                    confirm_password:{
+                        equalTo:"#password"
+                    }
+                },
+                messages:{
+                    username:{
+                        required:"用户名必须填写",
+                        minlength: "用户名最少为2个字符",
+                        maxlength:"用户名最多为10个字符",
+                        remote:"用户名不存在"
+                    },
+                    password:{
+                        required:"密码必须填写",
+                        minlength: "密码最少为2个字符",
+                        maxlength:"密码最多为10个字符"
+                    },
+                    confirm_password:{
+                        equalTo:"两次输入的密码不一致"
+                    }
+                }
+            });
+
+            $("#check").click(function () {
+                alert($("#demoForm").valid()?"填写正确":"填写错误");
+            });
+        });
+    </script>
+</head>
+<body>
+  <div id="wrap">
+    <form id="demoForm">
+            <p>登录信息</p>
+            <p><label>用户名:</label><input type="text" id="username" name="username"/></p>
+            <p><label>密码:  </label><input type="password" id="password" name="password"></p>
+            <p><label>确认密码:  </label><input type="password" id="confirm_password" name="confirm_password"></p>
+             <input type="button" id="check" value="检查"/>
+             <input type="submit" id="submit" value="提交"/>
+    </form>
+      <p1>
+          valid方法：检查表单元素是否有效 <br/>
+          rules()：获取表单元素的检效规则<br/>
+
+          rules()方法只针对表单的元素对象，而不是整个表单<br/>
+          例：获取id为username的input的rules:<br/>
+          $("#username").rules();
+          输出为：
+          Object {
+          required: true,
+          minlength: 2,
+          maxlength: 10}<br/>
+
+          rules("add",reles);<br/>
+          例：添加一个规则<br/>
+          $("#username").rules("add",{email:true}); 输出为：
+          Object {required: true, minlength: 2, maxlength: 10, email: true}<br/>
+          例：添加多个规则<br/>
+          $("#username").rules("add",{maxlenght:15,minlenght:1});<br/>
+
+          rules("remove",reles);<br/>
+          例：<br/>
+          $("#username").rules("remove","maxlength");
+      </p1>
+  </div>
+</body>
+</html>

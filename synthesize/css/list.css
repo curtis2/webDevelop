@@ -1,0 +1,116 @@
+.news{
+    width: 100%;
+    border: 1px solid #E8E8E8;
+}
+
+.newType{
+    float: left;
+    width:  200px;
+    height: 360px;
+    border: 1px solid #E8E8E8;
+}
+
+.newContent{
+    float: left;
+    width:  796px;
+    border: 1px solid #E8E8E8;
+    background-color: #ffffff;
+ }
+
+
+.title{
+    padding: 10px 2px;
+    font-size: 12px;
+    color: #786F66;
+    border-bottom: 1px solid  #E8E8E8;
+}
+
+.newType li a{
+    font-size: 12px;
+    padding: 5px 10px ;
+    border-bottom: 1px dotted #CCC;
+    display: block;
+}
+
+.newType a:link,.page a:visited{
+    color: #000000;
+    background:url("../images/li_bg.gif") no-repeat left center #ffffff;
+}
+
+.newType a:hover,.page a:active{
+    color: blue;
+    background:url("../images/li_bg2.gif") no-repeat left center #F5F5F5;
+}
+
+.newType a.selected{
+    color: blue;
+    background:url("../images/li_bg2.gif") no-repeat left center #F5F5F5;
+}
+
+
+.title_content{
+    padding: 10px 2px;
+    font-size: 12px;
+    color: #786F66;
+    border-bottom: 2px solid  #ff3e94;
+}
+
+.newContent li{
+    font-size: 12px;
+    padding: 5px 10px ;
+    color: #000000;
+    border-bottom: 1px dotted #CCC;
+}
+
+.newContent li a{
+    color: #000000;
+}
+
+.newContent li a:hover{
+    color: blue;
+}
+
+.newContent li span{
+    float: right;
+}
+
+
+.page{
+    clear: both;
+    height: 40px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page a{
+    margin: 5px 5px;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 1px solid #E8E8E8;
+}
+
+.page a:link,.page a:visited{
+    color: #000000;
+}
+.page a:hover,.page a:active{
+    color: #ffffff;
+    background-color:#cc1b1b;
+}
+.page a.active{
+    color: #ffffff;
+    background-color:#cc1b1b;
+}
+
+/*
+   页签的制作的知识点：
+   1.div中如果都是行业元素，可以通过text-align:center进行居中
+   2.选择器的层级问题
+*/
+
+
+
+
+
+
+
+

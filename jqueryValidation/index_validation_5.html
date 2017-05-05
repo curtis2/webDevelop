@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>JQueryValidation-validate方法配置项</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.10.0.js"></script>
+    <script src="js/jquery.validate-1.13.1.js"></script>
+    <script type="text/javascript">
+        var validator;
+        $(document).ready(function () {
+            //设置本页面上所有的表单的配置
+            validator= $("#demoForm").validate({
+                rules:{
+                    username:{
+//                        required:true,
+                        //每个规则都有一个depends属性，如果这个规则要起作用。需要depends属性先成立
+                        required:{
+                            depends:function (element) {
+                                //填写密码才会验证账号
+                               return $("#password").is(":filled");
+                            }
+                        },
+                      /*  minlength: {
+                            param:2,
+                            depends:function (element) {
+                                //填写密码才会
+                                return $("#password").is(":filled");
+                            }
+                        },*/
+                        maxlength:10
+                    },
+                    password:{
+                        required:true,
+                        minlength: 2,
+                        maxlength:10
+                    },
+                    // equalTo的值和指定的选择器的值相比
+                    confirm_password:{
+                        equalTo:"#password"
+                    }
+                },
+                messages:{
+                    username:{
+                        required:"用户名必须填写",
+                        minlength: "用户名最少为2个字符",
+                        maxlength:"用户名最多为10个字符",
+                        remote:"用户名不存在"
+                    },
+                    password:{
+                        required:"密码必须填写",
+                        minlength: "密码最少为2个字符",
+                        maxlength:"密码最多为10个字符"
+                    },
+                    confirm_password:{
+                        equalTo:"两次输入的密码不一致"
+                    }
+                },
+
+                //验证通过后会回调这个函数，其中form是表单
+                submitHandler:function (form) {
+                    console.log((form));
+                    console.log($(form).serialize());
+                },
+            /*    //验证失败后后会回调这个函数，其中form是表单
+                invalidHandler:function (event,validator) {
+//                    console.log((form));
+                    console.log("错误数"+validator.numberOfInvalids());
+                }*/
+
+              //对某个元素不进行校验，值为一个选择器
+               ignore:"#username",
+
+                //groups和errorPlacement组合使用，把出错信息显示在指定位置
+               groups:{
+                   login:"username password confirm-password",
+               },
+               errorPlacement:function (error,element) {
+                   error.insertBefore("#info");
+               }
+            });
+
+            //invalidHandler单独触发
+            $("#demoForm").on("invalid-form",function (event,validator) {
+                console.log("错误数"+validator.numberOfInvalids());
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <form id="demoForm">
+        <p>登录信息</p>
+        <p id="info"></p>
+        <p><label>用户名:</label><input type="text" id="username"  class="text" name="username"/></p>
+        <p><label>密码:  </label><input type="password" id="password" class="text" name="password"></p>
+        <p><label>确认密码:  </label><input type="password" id="confirm_password" name="confirm_password"></p>
+        <input type="button" id="check" value="检查"/>
+        <input type="submit" id="submit" value="提交"/>
+    </form>
+    <p1>validate方法配置项</br>
+        submitHandler 通过验证后运行的函数，可以在这个函数中加上表单提交的方法</br>
+        invalidHandler 无效表单提交后运行的函数</br>
+        ignore 对某些元素不进行验证</br>
+        rules 定义检验规则</br>
+        messages 定义消息</br>
+        groups 对一组元素的验证，用一个错误提示，<strong>用errorPlacement控制把出错信息放在哪里</strong></br>
+    </p1>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
