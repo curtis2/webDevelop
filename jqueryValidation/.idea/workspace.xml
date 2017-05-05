@@ -18,8 +18,8 @@
       <file leaf-file-name="index_validation_5.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index_validation_5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="74" column="56" lean-forward="false" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+            <state relative-caret-position="92">
+              <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -243,12 +243,12 @@
       <option name="presentableId" value="Default" />
       <updated>1493866397700</updated>
       <workItem from="1493866398979" duration="10986000" />
-      <workItem from="1493953603659" duration="12156000" />
+      <workItem from="1493953603659" duration="13355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23142000" />
+    <option name="totallyTimeSpent" value="24341000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index_validation_5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="74" column="56" lean-forward="false" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+        <state relative-caret-position="92">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="26" />
           <folding />
         </state>
       </provider>
