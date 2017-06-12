@@ -28,10 +28,10 @@ http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb30
 6.Jquery基础<br>
 http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499993118b8173572625b4afe93a8b19dd707ea1d000
 7.网页综合布局实战<br>
-![Alt text](./微信截图_20170612173832.png)
+![Alt text](https://github.com/curtis2/webDevelop/blob/master/images/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20170612173832.png
 https://github.com/curtis2/webDevelop/blob/master/synthesize/index_1.html
 8.商城分类导航效果<br>
-![Alt text](./微信截图_20170612174009.png)
+![Alt text](https://github.com/curtis2/webDevelop/blob/master/images/EM%E6%88%AA%E5%9B%BE_2017612173945.png)
 https://github.com/curtis2/webDevelop/blob/master/shoppingmall/index_js.html
 
 **整理的笔记：**
