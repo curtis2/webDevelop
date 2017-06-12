@@ -13,7 +13,7 @@ Css+Html+Js基础<br>
   - 绝对定位布局<br>
 
 3.信息排列布局（ul）<br>
-![Alt text](./微信截图_20170612173630.png)
+![Alt text](https://github.com/curtis2/webDevelop/blob/master/images/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20170612173630.png)
 https://github.com/curtis2/webDevelop/blob/master/js1/list-3%20-%20%E6%9C%80%E7%BB%88.html
 4.tab选项卡效果<br>
   - 滑动切换效果
